@@ -5,21 +5,27 @@
 #include <fstream>
 using namespace std;
 
+ void myRegister() {
+    string uname;
+    string upassword;
+        cout << "Please create a username and password" << endl;
+        cout << "Username: ";
+        cin >> uname;
+        cout << "Password: ";
+        cin >> upassword;
+        ofstream MyFile("filename.txt");
+        MyFile << "Username: " << uname << endl;
+        MyFile << "Password: " << upassword << endl;
+
+        MyFile.close();
+
+    }
+
 int main()
 {
-    ofstream MyFile("filename.txt");
-
-    MyFile << "Files can be tricky but it is fun enough!";
-
-    MyFile.close();
+    
     cout << "Hello World!\n";
-
-    void myRegister(string uname, string psword) {
-        cout << "Please create a username and password" << endl;
-        cout << "Username:";
-        cin >> uname >> endl;
-        
-    };
+    
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
